@@ -177,9 +177,9 @@ createRestaurantHTML = (restaurant) => {
 	li.append(address);
 
 	const more = document.createElement('a');
-	more.innerHTML = 'View Details';
+	more.innerHTML = `<p>${restaurant.name}, ${restaurant.cuisine_type} restaurant in ${restaurant.neighborhood}</p>View Details`;
 	more.href = DBHelper.urlForRestaurant(restaurant);
-	li.append(more)
+	li.append(more);
 
 	return li;
 };
