@@ -17,16 +17,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	if('serviceWorker' in navigator) {
 	  navigator.serviceWorker
 	           .register('/js/sw.js')
-	           .then(function() { console.log("Service Worker Registered"); });
+	           .then(function() { console.log("Service Worker Registered"); })
+	           .catch(function() { console.log('Service worker not registered.'); });
 	} else {
 		console.log("No browser support for serviceWorker");
 	}
 
 });
 
-window.onload = function() {
-	seWo();
-};
+// window.onload = function() {
+// 	seWo();
+// };
 
 /**
  * Fetch all neighborhoods and set their HTML.
