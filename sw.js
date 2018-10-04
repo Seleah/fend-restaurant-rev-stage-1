@@ -27,8 +27,16 @@ let urlsToCache = [
 	'restaurant.html?id=7',
 	'restaurant.html?id=8',
 	'restaurant.html?id=9',
-	'restaurant.html?id=10'
+	'restaurant.html?id=10',
+	'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
+	'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
+	''
 ];
+
+
+// https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=pk.eyJ1Ijoic2VsZWFoIiwiYSI6ImNqbWk4amNuMjAyY2ozcHF6cGVqM255aGcifQ.dlD4kMnErVlTy4qhqb9TGg
+
+
 
 self.addEventListener('install', event => {
 	event.waitUntil(
